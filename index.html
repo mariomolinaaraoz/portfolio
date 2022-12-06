@@ -592,26 +592,24 @@
     <section id="contacto">
       <h3 class="titulo-seccion">Contactanos ahora</h3>
       <div class="contenedor-form">
-        <form action="">
+        <form id="form_contact">
           <div class="fila mitad">
             <input
               type="text"
+              name="from_name" id="from_name"
               placeholder="Nombre Completo *"
               class="input-mitad"
             />
             <input
               type="email"
+              name="email" id="email"
               placeholder="Dirección de Email"
               class="input-mitad"
             />
           </div>
           <div class="fila">
-            <input type="text" placeholder="Tema..." class="input-full" />
-          </div>
-          <div class="fila">
             <textarea
-              name=""
-              id=""
+              name="message" id="message"
               cols="30"
               rows="10"
               placeholder="Tu Mensaje..."
@@ -619,7 +617,7 @@
             ></textarea>
           </div>
 
-          <input type="submit" value="Enviar Mensaje" class="btn-enviar" />
+          <input type="submit" id="button_form_contact" value="Enviar Mensaje" class="btn-enviar" />
         </form>
       </div>
     </section>
@@ -655,5 +653,7 @@
 
     <script src="script.js"></script>
     <script>ScrollReveal().reveal('.headline',{delay:400});</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init('TxBydyoMa4SKLDCsH')</script>
   </body>
 </html>

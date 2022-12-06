@@ -18,3 +18,24 @@ function responsiveMenu() {
         x.className = "";
     }
 }
+
+const btn = document.getElementById('button_form_contact');
+
+document.getElementById('form_contact')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'service_kl1plj1';
+   const templateID = 'template_codsbny';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar Mensaje';
+      alert('Enviado!');
+    }, (err) => {
+      btn.value = 'Enviar Mensaje';
+      alert(JSON.stringify(err));
+    });
+});

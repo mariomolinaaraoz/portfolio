@@ -464,7 +464,7 @@
         }
         
         #contacto .titulo-seccion {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         
         #contacto .contenedor-form {
@@ -517,6 +517,7 @@
         
         #contacto .btn-enviar:hover {
             background-color: var(--color-enfasis);
+            border: #919191;
             color: #000;
         }
         /* *********************/
