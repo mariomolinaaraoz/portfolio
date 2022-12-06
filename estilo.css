@@ -509,6 +509,7 @@
             margin: auto;
             cursor: pointer;
             transition: .5s;
+            border:#111135;
             padding: 10px 15px !important;
         }
         
