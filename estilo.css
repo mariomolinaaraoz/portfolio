@@ -145,6 +145,23 @@ html.sr .load-hidden {
   display: none;
 }
 /* *********************/
+/* seccion F L O A T I N G  B U T T O N */
+/* *********************/
+#whatsapp {
+  width: 2rem;
+  height: auto;
+  position: fixed;
+  top:50rem;
+  right: 6rem;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+}
+circle {
+  fill: #25d366;
+}
+path {
+  fill: #fff;
+}
+/* *********************/
 /* seccion S O B R E  M I */
 /* *********************/
 
