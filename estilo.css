@@ -431,7 +431,7 @@ path {
   text-transform: uppercase;
   color: #111135;
   text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+  text-decoration-color: var(--color-enfasis);
   text-decoration-thickness: 5px;
 }
 
@@ -478,28 +478,28 @@ path {
   bottom: 0;
 }
 /* *********************/
-/* seccion C A L C U L A T O R */
+/* seccion A P P S */
 /* *********************/
-#calculator {
+#apps {
   padding: 100px 15px 50px;
   background: linear-gradient(320deg,#eb92be,#ffef78,#63c9b4);
   display:flex;
   font-family: 'Dosis', sans-serif;
   font-display:swap;
   height: inherit;
-  justify-content: center;
+  justify-content: space-between;
 }
-#calculator .titulo-seccion {
+#apps .titulo-seccion {
   margin: 2rem 0;
   text-align: center;
   font-size: 22px;
   text-transform: uppercase;
   color: #111135;
   text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+  text-decoration-color: var(--color-enfasis);
   text-decoration-thickness: 5px;
 }
-#calculator .wrapper{
+#apps .wrapper{
   -webkit-backdrop-filter: blur(5.5px);
   backdrop-filter: blur(5.5px);
   border-radius: 1rem;
@@ -513,7 +513,99 @@ path {
   height: 640px;
   padding: 20px 35px;
 }
-#calculator .screen{
+
+
+
+
+
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#apps .screen{
   -webkit-backdrop-filter: blur(5.5px);
   backdrop-filter: blur(5.5px);
   background: rgba(255,255,255,0.75);
@@ -527,12 +619,12 @@ path {
   text-align: right;
   width: 326px;
 }
-#calculator .calc-buttons .calc-button-row {
+#apps .calc-buttons .calc-button-row {
    display:flex;
    justify-content: space-between;
    margin:5% 0;
 }
-#calculator .calc-buttons .calc-button-row .calc-button{
+#apps .calc-buttons .calc-button-row .calc-button{
   -webkit-backdrop-filter: blur(5.5px);
   backdrop-filter: blur(5.5px);
   background:rgba(255, 255, 255, 0.75);
@@ -545,7 +637,7 @@ path {
   font-size:24px;
   height: 65px;
 }
-#calculator .calc-buttons .calc-button-row .calc-button:last-child{
+#apps .calc-buttons .calc-button-row .calc-button:last-child{
   -webkit-backdrop-filter: blur(5.5px);
   backdrop-filter: blur(5.5px);
   background:rgba(255, 255, 255, 0.75);
@@ -555,20 +647,20 @@ path {
   color: #fff;
   background: #d72880;
 }
-#calculator .calc-buttons .calc-button-row .calc-button:last-child:hover{
+#apps .calc-buttons .calc-button-row .calc-button:last-child:hover{
   background: inherit;
   color:inherit;
 }
-#calculator .calc-buttons .calc-button-row .calc-button:hover{
+#apps .calc-buttons .calc-button-row .calc-button:hover{
   background-color: inherit;
 }
-#calculator .calc-buttons .calc-button-row .calc-button:active{
+#apps .calc-buttons .calc-button-row .calc-button:active{
   background-color: #ffef78;  
 }
-#calculator .calc-buttons .calc-button-row .double{
+#apps .calc-buttons .calc-button-row .double{
   flex-basis: 47%;
 }
-#calculator .calc-buttons .calc-button-row .triple{
+#apps .calc-buttons .calc-button-row .triple{
   flex-basis: 73%
 }
 /* *********************/
