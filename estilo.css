@@ -8,9 +8,29 @@
   box-sizing: border-box;
   font-family: "Montserrat";
 }
-
-html.sr .load-hidden {
+html .sr .load-hidden {
   visibility: hidden;
+}
+
+/* *********************/
+/* T I T U L O  S E C C I O N */
+/* *********************/
+
+section#servicios, section#skills, section#portfolio, section#apps, section#contacto{
+  padding: 50px 15px 20px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #111135;
+  text-decoration: underline;
+  text-decoration-color: var(--color-enfasis);
+  text-decoration-thickness: 5px;
+  margin-bottom: 2.5rem;
 }
 /* *********************/
 /* seccion I N I C I O */
@@ -156,10 +176,10 @@ html.sr .load-hidden {
   filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
   animation: pulse 2s infinite;
 }
-circle {
+#whatsapp circle {
   fill: #25d366;
 }
-path {
+#whatsapp path {
   fill: #fff;
 }
 @keyframes pulse {
@@ -224,6 +244,7 @@ path {
 
 #sobremi .sobremi h3 {
   font-size: 18px;
+
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -255,37 +276,19 @@ path {
 /* *********************/
 /* seccion S E R V I C I O S */
 /* *********************/
-
-#servicios {
-  padding: 100px 15px 20px;
-
-  text-align: center;
-  background-color: #f3f3f3;
-}
-
-#servicios .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-}
-
 #servicios .fila {
   display: flex;
   justify-content: space-between;
   max-width: 1150px;
-  margin: 50px auto;
+  margin: 0 auto;
 }
 
 #servicios .fila .servicio {
   max-width: 350px;
   background-color: #fff;
   padding: 30px;
-  margin: 0 5px;
-  border-radius: 5px;
+  margin: 0 5px 1rem;
+  border-radius: .75rem;
   transition: 0.5s;
 }
 
@@ -341,24 +344,13 @@ path {
   padding: 100px 15px 20px;
   text-align: center;
 }
-
-#skills .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-  margin-bottom: 2.5rem;
-}
 .contenedor-skills .skill {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   opacity: 1;
   transform: none;
-  max-width: 600px;
+  max-width: 1150px;
   margin: 30px auto;
 }
 .skill div {
@@ -373,13 +365,13 @@ path {
 .skill div:hover {
   transform: translateY(0px) scale(1.2) rotate(15deg) translateZ(0px);
 }
-#javascript {
+#javascript{
   color: rgb(247, 223, 30);
 }
 #typescript {
   color: rgb(49, 120, 198);
 }
-#react {
+#skills #react{
   color: rgb(97, 218, 251);
 }
 #nextjs {
@@ -419,63 +411,44 @@ path {
 /* *********************/
 /* seccion P O R T F O L I O */
 /* *********************/
-#portfolio {
-  max-width: 1100px;
-  padding: 100px 15px 20px;
-  margin: auto;
-}
-
-#portfolio .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-}
-
-#portfolio .fila {
+.gallery {
   display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-
-#portfolio .fila .proyecto {
-  max-width: 450px;
-  border: 1px solid #000;
-  margin: 0 10px;
-  position: relative;
+.image {
+  margin: .75rem;
+  width: 400px;
+  height: 225px;
   overflow: hidden;
 }
-
-#portfolio .fila .proyecto img {
+.image img {
   width: 100%;
   height: 100%;
-  filter: grayscale(1);
   object-fit: cover;
-  transition: 0.5s;
+  filter: grayscale(1);
+  transition: transform 0.5s;
 }
-
-#portfolio .fila .proyecto:hover img {
+.image:hover img {
   filter: grayscale(0);
+  transform: scale(1.1);
 }
-
-#portfolio .fila .proyecto .info {
-  position: absolute;
+.image .info {
+  position: relative;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.8);
+  font-size: .75rem;
   color: var(--color-enfasis);
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   opacity: 0;
-  bottom: -40px;
-  transition: 0.5s;
+  bottom: 0px;
+  transition: 1s;
 }
-
-#portfolio .fila .proyecto:hover .info {
-  opacity: 1;
-  bottom: 0;
+.image:hover .info{
+  opacity:1;
+  bottom:3.2rem;
 }
 /* *********************/
 /* seccion A P P S */
@@ -488,16 +461,6 @@ path {
   font-display:swap;
   height: inherit;
   justify-content: space-between;
-}
-#apps .titulo-seccion {
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
 }
 #apps .wrapper{
   -webkit-backdrop-filter: blur(5.5px);
@@ -512,99 +475,9 @@ path {
   flex-basis: 400px;
   height: 640px;
   padding: 20px 35px;
+  max-width: 1150px;
+  margin:0 auto;
 }
-
-
-
-
-
-
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 #apps .screen{
   -webkit-backdrop-filter: blur(5.5px);
   backdrop-filter: blur(5.5px);
@@ -671,11 +544,6 @@ path {
   padding: 100px 15px 50px;
   background-color: #f3f3f3;
 }
-
-#contacto .titulo-seccion {
-  margin-bottom: 40px;
-}
-
 #contacto .contenedor-form {
   max-width: 1100px;
   margin: auto;

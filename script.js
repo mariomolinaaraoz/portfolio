@@ -1,32 +1,24 @@
-// Galeria
-var slideIndex = 1;
-showSlides(slideIndex);
+// Ajustar el tamaño de las imágenes a medida que se carga la página y cuando se cambia el tamaño de la ventana del navegador.
+window.addEventListener('load', adjustImageSize);
+window.addEventListener('resize', adjustImageSize);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function adjustImageSize() {
+  const images = document.querySelectorAll('.image');
+  images.forEach((image) => {
+    const img = image.querySelector('img');
+    const aspectRatio = img.naturalWidth / img.naturalHeight;
+    const containerWidth = image.offsetWidth;
+    const containerHeight = image.offsetHeight;
+    const containerAspectRatio = containerWidth / containerHeight;
+    if (aspectRatio > containerAspectRatio) {
+      img.style.width = '100%';
+      img.style.height = 'auto';
+    } else {
+      img.style.width = 'auto';
+      img.style.height = '100%';
+    }
+  });
 }
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 
 
 // Calculator
 let runningTotal = 0;

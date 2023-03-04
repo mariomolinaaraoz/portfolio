@@ -32,6 +32,12 @@
       sizes="16x16"
       href="./assets/favicon/favicon-16x16.png"
     />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" /> -->
+    <!-- Fancybox and Jquery CDN
+    This link get github repository -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       ScrollReveal({ reset: true });
@@ -76,7 +82,7 @@
     <title>&ltmario_molina&gt</title>
   </head>
 
-  <body>
+  <body>    
     <!-- SECCION I N I C I O -->
     <section id="inicio">
       <div class="contenido">
@@ -574,87 +580,64 @@
 
     <!-- SECCION P O R T A F O L I O -->
     <section id="portfolio" class="headline load-hidden">
-      <h3 class="titulo-seccion">Mis Proyectos</h3>
-      <div class="fila">
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto1.jpg" alt="" />
+      <h3 class="titulo-seccion">Portfolio</h3>
+      <div class="gallery">
+        <div class="image">
+          <a href="./assets/img/proyecto1.jpg" data-fancybox="gallery" data-caption="Sitio Personal - Página Web personal y api minería.">
+            <img src="./assets/img/proyecto1.jpg" alt="Portfolio 1"/>
+          </a>
           <div class="info">
             <h4>Sitio Personal</h4>
             <p>Página Web personal y api minería.</p>
           </div>
         </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto2.jpg" alt="" />
+        <div class="image">
+          <a href="./assets/img/proyecto2.jpg" data-fancybox="gallery" data-caption="Web de recetas y tienda - Proyecto full stack, con instancias backend.">
+            <img src="./assets/img/proyecto2.jpg" alt="Sitio de Recetas"/>
+          </a>
           <div class="info">
             <h4>Web de recetas y tienda</h4>
-            <p>Proyecto ful stack, con instancias backend.</p>
+            <p>Proyecto full stack, con instancias backend.</p>
           </div>
         </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto3.jpg" alt="" />
+        <div class="image">
+          <a href="./assets/img/proyecto3.jpg" data-fancybox="gallery" data-caption="Portfolio - Html, CSS, JS.">
+            <img src="./assets/img/proyecto3.jpg" alt="Portfolio 2"/>
+          </a>
           <div class="info">
             <h4>Portfolio</h4>
             <p>Html, CSS, JS.</p>
           </div>
         </div>
-      </div>
-      <div class="fila">
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto4.jpg" alt="" />
+        <div class="image">
+          <a href="./assets/img/proyecto4.jpg" data-fancybox="gallery" data-caption="Landing Page - Electric cars site.">
+            <img src="./assets/img/proyecto4.jpg" alt="Sitio de Autos Electricos"/>
+          </a>
           <div class="info">
             <h4>Landing Page BMW</h4>
             <p>Electric cars site.</p>
           </div>
         </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto5.jpg" alt="" />
+        <div class="image">
+          <a href="./assets/img/proyecto5.jpg" data-fancybox="gallery" data-caption="Tribute Page - Claudia Schiffer portfolio.">
+            <img src="./assets/img/proyecto5.jpg" alt="Tribute Page" />
+          </a>
           <div class="info">
             <h4>Tribute Page</h4>
             <p>Claudia Schiffer portfolio.</p>
           </div>
         </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto6.jpg" alt="" />
-          <div class="info">
+        <div class="image">
+          <a href="./assets/img/proyecto6.jpg" data-fancybox="gallery" data-caption="Technical Documentation Page - For document information.">
+            <img src="./assets/img/proyecto6.jpg" alt="Technical Documentation Page" />
+          </a>
+            <div class="info">
             <h4>Technical Documentation Page</h4>
             <p>For document information.</p>
           </div>
         </div>
-      </div>
-      <div class="fila">
-        <!-- <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto7.jpg" alt="" />
-          <div class="info">
-            <h4>Descripcion Proyecto</h4>
-            <p>Diseño Web</p>
-          </div>
-        </div> -->
-        <!-- <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto8.jpg" alt="" />
-          <div class="info">
-            <h4>Descripcion Proyecto</h4>
-            <p>Diseño Web</p>
-          </div>
-        </div> -->
-        <!-- <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./assets/img/proyecto9.jpg" alt="" />
-          <div class="info">
-            <h4>Descripcion Proyecto</h4>
-            <p>Diseño Web</p>
-          </div>
-        </div> -->
-      </div>
+      </div>      
     </section>
-
     <!-- SECCION A P P S -->
     <section id="apps">
       <div class="wrapper">
@@ -804,6 +787,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>     -->
+    
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script> -->
+
     <script>
       ScrollReveal().reveal(".headline", { delay: 400 });
     </script>
@@ -814,7 +803,6 @@
     <script type="text/javascript">
       emailjs.init("TxBydyoMa4SKLDCsH");
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
         // Add smooth scrolling to all links
